@@ -73,7 +73,6 @@ import sys
 
 import defsparser
 
-from sets import Set
 
 # ------------------ Create typecodes from typenames ---------
 
@@ -512,7 +511,7 @@ class DefsWriter:
     def _define_func(self, buf):
         buf = clean_func(buf)
         buf = buf.split('\n')
-        all_functions = Set()
+        all_functions = set()
         filter = self._functions
         for p in buf:
             if not p:
